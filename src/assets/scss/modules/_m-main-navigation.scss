@@ -18,6 +18,7 @@
       color: color('foreground', 'invert');
       padding: 15px 20px;
       font-size: 15px;
+      cursor: pointer;
 
       @include respond-to('huge') {
         padding: 15px 35px;

@@ -57,6 +57,11 @@
     }
   }
 
+  .home-link {
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+  }
   &__logo-engie {
     display: block;
     position: relative;
