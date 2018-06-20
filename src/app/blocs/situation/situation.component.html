@@ -1,0 +1,36 @@
+<div class="bloc-situation-container">
+  <div class="bloc-situation">
+    <div class="bloc-situation__inner">
+      <h2 class="h2 h2--invert">Ma situation</h2>
+      <a class="button button--red" (click)="toggleDemenagement()">Je déménage</a>
+      <a class="button button--red active" (click)="toggleFournisseur()">Je change de fournisseur</a>
+    </div>
+  </div>
+  <div *ngIf="demenagement" class="bloc-situation-container__info">
+    <div class="bloc-situation-container__info__inner">
+      <h2 class="h2 red">Je déménage</h2>
+      <div class="bloc-conso">
+        <p class="text text--gray">
+            Lorem ipsum dolor sit amet, cotnsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        </p>
+        <div class="list-cool">Plus de papiers</div>
+        <div class="list-cool">Un suivi de de conso’ personnalisé</div>
+        <div class="list-cool">Votre historique d’échange avec Happ-e</div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="fournisseur" class="bloc-situation-container__info">
+      <div class="bloc-situation-container__info__inner">
+        <h2 class="h2 red">Je change de fournisseur</h2>
+        <div class="bloc-conso">
+          <p class="text text--gray">
+              Lorem ipsum dolor sit amet, cotnsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          </p>
+          <div class="list-cool">Plus de papiers</div>
+          <div class="list-cool">Un suivi de de conso’ personnalisé</div>
+          <div class="list-cool">Votre historique d’échange avec Happ-e</div>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,14 +1,117 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
   <title>Happ-e</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Styles -->
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="./assets/dist/css/externals/slick.css" />
+  <link rel="stylesheet" href="./assets/dist/css/main.css">
 </head>
+
 <body>
-  <app-root></app-root>
+  <div class="main-container">
+
+    <!-- Header -->
+    <header class="main-header">
+
+      <nav class="sticky">
+        <div class="sticky__inner">
+          <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <img src="./assets/images/logo-header.png" alt="" class="main-header__logo-engie">
+
+          <ul class="main-navigation">
+            <li class="main-navigation__item">
+              <a href="">Nos offres</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="">Combien j'économise</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="">Mon guide Happ-e</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="">FAQ</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="" class="mea">Souscrire</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="">Me connecter</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="main-header__inner">
+        <img src="./assets/images/visuel-header.png" alt="" class="main-header__visu">
+        <div class="main-header__inner__title-container">
+          <img src="./assets/images/logo-original.png" alt="" class="main-header__logo">
+          <p class="main-header__baseline">Mon contrat énergie simple et accessible à tout moment</p>
+          <a href="" class="button">Voir toutes les offres</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main app -->
+    <app-root></app-root>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="main-footer__top">
+          <img src="./assets/images/logo-header.png" alt="" class="main-footer__logo-engie">
+          <p class="text text--invert">Lancé par ENGIE (ex GDF SUEZ), happ-e.fr est un site dédié à la vente en ligne d'électricité pour les clients particuliers
+            résidant en France métropolitaine*.
+          </p>
+          <p class="text text--invert">L’énergie est notre avenir, économisons-la !</p>
+        </div>
+        <div class="main-footer__bottom">
+          <div class="main-footer__bottom__item">
+            <div class="main-footer__bottom__title">Emballé(e) ?</div>
+            <p>Recommandez à vos amis et bénéficiez de réductions sur vos factures !</p>
+          </div>
+
+          <div class="main-footer__bottom__item">
+            <div class="main-footer__bottom__title">Plus sur Happ-e</div>
+            <a href="">Blog</a>
+            <a href="">Facebook</a>
+            <a href="">Twitter</a>
+          </div>
+
+          <div class="main-footer__bottom__item">
+            <div class="main-footer__bottom__title">Assistance client</div>
+            <a href="">FAQ</a>
+            <a href="">Contact</a>
+            <a href="">Lexique électricité</a>
+          </div>
+
+          <div class="main-footer__bottom__item">
+            <div class="main-footer__bottom__title">Confidentialité</div>
+            <a href="">Notre politique</a>
+          </div>
+
+          <div class="main-footer__bottom__item main-footer__bottom__item--full">
+            <div class="main-footer__bottom__title">Télécharger l'application</div>
+            <a href="">
+              <img src="./assets/images/google-play.png" alt="">
+            </a>
+            <a href="">
+              <img src="./assets/images/app-store.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 </body>
+
 </html>

@@ -1,0 +1,255 @@
+// _m-offer.scss
+
+.offers-slider {
+  margin: 40px 0;
+
+  @include respond-to('large') {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+  }
+}
+
+.offer {
+  margin: 0 10px;
+  padding: 25px;
+  border-radius: 5px;
+  text-align: center;
+  color: color('foreground', 'invert');
+
+  @include respond-to('large') {
+    margin: 0 20px;
+    padding: 30px;
+  }
+  @include respond-to('huge') {
+    margin: 0 35px;
+    padding: 55px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 100;
+
+    @include respond-to('large') {
+      font-size: 30px;
+    }
+  }
+  &__reduc {
+    font-weight: 700;
+    font-size: 64px;
+    margin: 20px 0;
+
+    @include respond-to('large') {
+      font-size: 90px;
+      margin: 45px 0 30px 0;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      width: 110px;
+      height: 1px;
+      margin: 10px auto;
+      background-color: color('secondary', 'red-light');
+
+      @include respond-to('large') {
+        width: 180px;
+        margin: 30px auto;
+      }
+    }
+
+    sup {
+      margin: 0 0 0 -15px;
+      font-size: 35px;
+      font-weight: 400;
+
+      @include respond-to('large') {
+        font-size: 50px;
+      }
+    }
+    span {
+      display: block;
+      font-weight: 100;
+      font-size: 16px;
+      margin-top: -6px;
+
+      @include respond-to('large') {
+        font-size: 22px;
+      }
+    }
+  }
+  &__desc {
+    color: color('secondary', 'red-light');
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: 300;
+
+    @include respond-to('large') {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+  }
+  .button {
+    font-weight: 400;
+  }
+
+
+  &.offer--red {
+    background-color: color('secondary', 'red');
+
+    .offer__reduc {
+      &::after {
+        background-color: color('secondary', 'red-light');
+      }
+    }
+    .offer__desc {
+      color: color('secondary', 'red-light');
+    }
+
+    @include respond-to('large') {
+      
+      .offer__title,
+      .offer__reduc {
+        color: color('secondary', 'red');
+      }  
+      .button {
+        border: solid 1px color('secondary', 'red');
+        color: color('secondary', 'red');
+      }
+
+      &:hover {
+        border: solid 1px color('secondary', 'red');
+        background-color: color('secondary', 'red');
+
+        .offer__reduc {
+          &::after {
+            background-color: color('secondary', 'red-light');
+          }
+        }
+
+        .offer__desc {
+          color: color('secondary', 'red-light');
+        }
+      }
+
+    }
+  }
+
+  &.offer--green {
+    background-color: color('secondary', 'green');
+
+    .offer__reduc {
+      &::after {
+        background-color: rgba(color('background'),.5);
+      }
+    }
+    .offer__desc {
+      color: rgba(color('background'),.5);
+    }
+
+    @include respond-to('large') {
+      
+      .offer__title,
+      .offer__reduc {
+        color: color('secondary', 'green');
+      }  
+      .button {
+        border: solid 1px color('secondary', 'green');
+        color: color('secondary', 'green');
+      }
+
+      &:hover {
+        border: solid 1px color('secondary', 'green');
+        background-color: color('secondary', 'green');
+
+        .offer__reduc {
+          &::after {
+            background-color: rgba(color('background'),.5);
+          }
+        }
+
+        .offer__desc {
+          color: rgba(color('background'),.5);
+        }
+      }
+
+    }
+  }
+  &.offer--blue {
+    background-color: color('primary');
+    .offer__reduc {
+      &::after {
+        background-color: rgba(color('background'),.5);
+      }
+    }
+    .offer__desc {
+      color: rgba(color('background'),.5);
+    }
+
+    @include respond-to('large') {
+      
+      .offer__title,
+      .offer__reduc {
+        color: color('primary');
+      }  
+      .button {
+        border: solid 1px color('primary');
+        color: color('primary');
+      }
+
+      &:hover {
+        border: solid 1px color('primary');
+        background-color: color('primary');
+
+        .offer__reduc {
+          &::after {
+            background-color: rgba(color('background'),.5);
+          }
+        }
+
+        .offer__desc {
+          color: rgba(color('background'),.5);
+        }
+      }
+
+    }
+  }
+
+  // For each offers (common styles)
+  &.offer--red,
+  &.offer--green,
+  &.offer--blue { 
+    @include respond-to('large') {
+      background-color: transparent;
+      border: solid 1px color('gray', 'light');
+      @include transition();
+
+      .offer__title,
+      .offer__reduc {
+        @include transition();
+      }
+      .offer__reduc {
+        &::after {
+          background-color: color('gray', 'light');
+        }
+      }
+      .offer__desc {
+        color: color('gray', 'light');
+      }
+      &:hover {
+        @include transition();
+
+        .offer__title,
+        .offer__reduc {
+          color: color('foreground', 'invert');
+          @include transition();
+        }
+        .button {
+          border: solid 1px color('background');
+          color: color('foreground', 'invert');
+        }
+      }
+    }
+  }
+}

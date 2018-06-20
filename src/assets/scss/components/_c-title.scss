@@ -1,20 +1,37 @@
 // _c-title.scss
 
-.title {
-  font-family: font('primary');
-  margin: 15px 0;
+.h2 {
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+  line-height: 36px;
+  width: 70%;
+  margin: auto;
 
-  .card & {
-    margin-top: 0;
+  @include respond-to('large') {
+    font-size: 44px;
+    line-height: 50px;
   }
 
-  &--primary { // h1 and primary level titles
-    @include font-size(30px);
-    color: color('primary');
+  &--invert {
+    color: color('foreground', 'invert');
+  }
+}
+
+.text {
+  font-size: 14px;
+  line-height: 24px;
+
+  @include respond-to('large') {
+    font-size: 18px;
+    line-height: 32px;
   }
 
-  &--secondary { // h2 and secondary level titles
-    @include font-size(20px);
-    color: color('secondary');
+  &--gray {
+    color: color('gray');
+  }
+
+  &--invert {
+    color: color('foreground', 'invert');
   }
 }

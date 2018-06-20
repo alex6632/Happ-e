@@ -1,0 +1,26 @@
+// _c-notation.scss
+
+.notation {
+  width: 114px;
+  height: 19px;
+  background: url('../../images/notation.png') no-repeat;
+
+  &--0 {
+    background-position: 0 0;
+  }
+  &--1 {
+    background-position: 0 -19px;
+  }
+  &--2 {
+    background-position: 0 -38px;
+  }
+  &--3 {
+    background-position: 0 -57px;
+  }
+  &--4 {
+    background-position: 0 -76px;
+  }
+  &--5 {
+    background-position: 0 -95px;
+  }
+}

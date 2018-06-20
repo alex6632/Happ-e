@@ -1,4 +1,5 @@
-# HappE
+# Happ-e
+![alt text](src/assets/images/logo_w300.png?raw=true "Logo Happ-e")
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 

@@ -5,5 +5,53 @@ html {
 }
 
 body {
-  @include font-size(16px);
+  font-family: font('primary');
+}
+
+.clearfix {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+.main-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+
+  @include respond-to('large') {
+    width: 1000px;
+  }
+  @include respond-to('huge') {
+    width: 1300px;
+  }
+}
+
+.yellow {
+  color: color('secondary', 'yellow');
+}
+.red {
+  color: color('secondary', 'red');
+}
+.green {
+  color: color('secondary', 'green');
+}
+.blue {
+  color: color('primary');
+}
+
+.bg-yellow {
+  background-color: color('secondary', 'yellow');
+}
+.bg-red {
+  background-color: color('secondary', 'red');
+}
+.bg-green {
+  background-color: color('secondary', 'green');
+}
+.bg-blue {
+  background-color: color('primary');
 }

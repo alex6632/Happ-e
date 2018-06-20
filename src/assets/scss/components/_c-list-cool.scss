@@ -1,0 +1,27 @@
+// _c-list-cool.scss
+
+.list-cool {
+  font-size: 14px;
+  font-weight: 700;
+  color: color('gray');
+  margin: 25px 0;
+
+  @include respond-to('large') {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    width: 90%;
+    margin: 25px auto;
+
+    &::before {
+      display: inline-block;
+      vertical-align: middle;
+      content: "";
+      width: 22px;
+      height: 22px;
+      background: url('../../images/valid.svg') no-repeat;
+      background-size: contain;
+      margin-right: 5px;
+    }
+  }
+}

@@ -1,61 +1,72 @@
 // _m-main-navigation.scss
 
 .main-navigation {
+  display: none;
+  float: right;
 
-  &__trigger {
-
-    @include respond-to('large') {
-      display: none;
-    }
-  }
-
-  &__list {
-    display: none;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-
-    @include respond-to('large') {
-      display: block;
-    }
-
-    .main-navigation.is-open & {
-      display: block;
-    }
-  }
-
-  &__sublist {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-
-    @include respond-to('large') {
-      position: absolute;
-      display: none;
-    }
-
-    .main-navigation__item.is-open & {
-      display: block;
-    }
-
-    .main-navigation__item:hover & {
-      @include respond-to('large') {
-        display: block;
-      }
-    }
+  @include respond-to('large') {
+    display: block;
   }
 
   &__item {
-    @include respond-to('large') {
-      display: inline-block;
+    display: inline-block;
+
+    a {
+      position: relative;
+      display: block;
+      text-decoration: none;
+      color: color('foreground', 'invert');
+      padding: 15px 20px;
+      font-size: 15px;
+
+      @include respond-to('huge') {
+        padding: 15px 35px;
+      }
+
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -25px;
+        width: 50px;
+        height: 2px;
+        background: color('background');
+        transform: scaleX(0);
+        @include transition();
+      }
+
+      &:hover {
+        &::after {
+          transform: scaleX(1);
+          @include transition();
+        }
+      }
+
+      &.mea {
+        background-color: color('primary', 'dark');
+        border-radius: 50px;
+      }
     }
   }
+  
+}
 
-  &__subitem {
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 50px;
+  background: linear-gradient(to right, rgba(36,12,150,1) 0%,rgba(39,12,170,1) 50%,rgba(38,12,164,1) 100%);
+  z-index: 99;
 
-  }
-
-  &__link {
-    display: inline-block;
+  &__inner {
+    @include respond-to('huge') {
+      width: 1300px;
+      display: block;
+      margin: auto;
+      overflow: hidden;
+    }
   }
 }

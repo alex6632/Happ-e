@@ -3,7 +3,7 @@
 $screen-xs: 480px; // @respond-to ('small') and overwrite bootstrap grid. Overwrite grid
 $screen-sm: 768px; // @respond-to ('medium') and overwrite bootstrap grid. Overwrite grid
 $screen-md: 1024px; // @respond-to ('large') and overwrite bootstrap grid. Overwrite grid
-$screen-lg: 1200px; // @respond-to ('huge') and overwrite bootstrap grid. Overwrite grid
+$screen-lg: 1300px; // @respond-to ('huge') and overwrite bootstrap grid. Overwrite grid
 $grid-gutter-width: 40px; // Overwrite grid ( gutters are / 2 visually )
 
 $font-size-base: 14px; // required by rem() mixins
@@ -20,24 +20,30 @@ $icomoon-font-path: '../fonts/ao-icon-agenceo';
 $color-key: 'base' !default;
 $colors: (
   'primary': (
-    'base': #000000, // To defined
-    'invert': #000000 // To defined
+    'base': #280cad,
+    'dark': #1c0390
   ),
   'secondary': (
-    'base': #000000, // To defined
-    'invert': #FFFFFF // To defined
+    'yellow': #ffb600,
+    'red': #ff604b,
+    'red-dark': #ef533f,
+    'red-light': #ffc7c0,
+    'green': #19b055,
   ),
   'foreground':(
-    'base': #000000, // Black
-    'invert': #FFFFFF // White
+    'base': #000,
+    'light': #646464,
+    'invert': #fff
   ),
   'background': (
-    'base': #FFFFFF, // White
-    'invert': #000000 // Black
+    'base': #FFFFFF,
+    'invert': #000000
   ),
   'gray': (
-    'base': #7e7e7e, // To defined
-    'invert': #FFFFFF // To defined
+    'base': #646464,
+    'light': #b1b1b1,
+    'super-light': #fafafa,
+    'invert': #fff,
   ),
   'social': (
     'base': #000, // Unused but required
@@ -64,14 +70,14 @@ $colors: (
 $font-key: 'base' !default;
 $fonts: (
   'primary': (
-    'base': ('Lato', sans-serif)
+    'base': ('Sofia', sans-serif)
   ),
   'secondary': (
     'base': ('Open Sans', sans-serif),
     'alt': ('Roboto', sans-serif),
   ),
   'icon': (
-    'base':('ao-icon-agenceo')
+    'base':('icon-happe')
   )
 );
 
