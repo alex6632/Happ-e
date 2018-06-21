@@ -1,0 +1,43 @@
+// _m-step.scss
+
+.step {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 150px; height: 85%;
+  width: 100px;
+
+  @include respond-to('huge') {
+    width: 150px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    background-color: color('gray', 'light-more');
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__number {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 36px;
+    line-height: 60px;
+    border-radius: 50%;
+    color: color('foreground', 'invert');
+    background: color('gray', 'light-more');
+    z-index: 9;
+
+    &.active {
+      background: color('primary');
+    }
+  }
+}

@@ -1,0 +1,118 @@
+// _c-form.scss
+
+.radio {
+  display: inline-block;
+
+  input {
+    -webkit-appearance: none;
+
+    & + label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 35px 10px;
+      color: color('gray');
+      line-height: 75px;
+      width: 250px;
+      height: 65px;
+      font-size: 15px;
+      border: solid 1px color('primary');
+      cursor: pointer;
+      @include transition();
+      
+      @include respond-to('huge') {
+        width: 320px;
+        height: 75px;
+        margin: 35px 20px;
+        font-size: 18px;
+      }
+
+      &:hover {
+        background-color: color('primary');
+        color: color('foreground', 'invert');
+        @include transition();
+
+        .icon {
+          color: color('foreground', 'invert');
+          @include transition();
+        }
+      }
+
+      .icon {
+        color: color('primary');
+        margin-right: 20px;
+        font-size: 30px;
+        @include transition();
+        
+        @include respond-to('huge') {
+          font-size: 40px;
+        }
+      }
+    }
+
+    &:checked {
+      & + label {
+        background-color: color('primary');
+        color: color('foreground', 'invert');
+        @include transition();
+
+        .icon {
+          color: color('foreground', 'invert');
+          @include transition();
+        }
+      }
+    }
+  }
+}
+
+.radio-offer {
+  width: 30%;  
+
+  input {
+    -webkit-appearance: none;
+    
+    & + label {
+      display: block;
+      cursor: pointer;
+    }
+
+    &:checked {
+      & + label {
+        @include transition();
+        .offer__title,
+        .offer__reduc {
+          color: color('foreground', 'invert');
+        }
+        &.offer--red {
+          background-color: color('secondary', 'red');
+          border: solid 1px color('secondary', 'red');
+          color: color('foreground', 'invert');
+        }
+        &.offer--blue {
+          background-color: color('primary');
+          border: solid 1px color('primary');
+          color: color('foreground', 'invert');
+          
+          .offer__reduc {
+            &::before {
+              background-color: rgba(color('background'),.5);
+            }
+          }
+        }
+        &.offer--green {
+          background-color: color('secondary', 'green');
+          border: solid 1px color('secondary', 'green');
+          color: color('foreground', 'invert');
+
+          .offer__reduc {
+            &::before {
+              background-color: rgba(color('background'),.5);
+            }
+          }
+        }
+        
+      }
+    }
+  }
+
+}

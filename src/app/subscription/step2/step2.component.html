@@ -1,0 +1,73 @@
+<div class="main-header invert alone">
+  <sticky></sticky>
+</div>
+
+<div class="container container--subscription">
+
+  <div class="subscription">
+
+    <div class="subscription__left">
+      <div class="title">Quelle offre choisir ?</div>
+      <h1 class="subtitle">Ce qui est sur, c’est que votre budget sera tranquille !</h1>
+      <p>
+        Avec
+        <strong>Happ-e</strong>, vous bénéficiez toujours de la même qualité d'électricité et gaz. Vous ne remarquerez aucun changement
+        dans vos appareils et le fonctionnement de votre compteur.
+      </p>
+    </div>
+
+    <div class="step">
+      <div class="step__number active">1</div>
+      <div class="step__number active">2</div>
+      <div class="step__number">3</div>
+      <div class="step__number">4</div>
+      <div class="step__number">5</div>
+      <div class="step__number">6</div>
+    </div>
+
+    <div class="subscription__right">
+      <div class="subscription__right__title">Je choisis mon offre :</div>
+      <div *ngIf="error !== ''" class="error">{{error}}</div>
+      <div class="offers-slider">
+
+        <div class="radio-offer">
+          <input type="radio" id="dual" name="offer" (click)="check()" required>
+          <label for="dual" class="offer offer--red">
+            <div class="offer__title">Électricité & Gaz</div>
+            <div class="offer__reduc">-2
+              <sup>%</sup>
+              <span>d'économie</span>
+            </div>
+          </label>
+        </div>
+
+        <div class="radio-offer">
+          <input type="radio" id="green" name="offer" (click)="check()" required>
+          <label for="green" class="offer offer--green">
+            <div class="offer__title">Électricité Verte</div>
+            <div class="offer__reduc">-2
+              <sup>%</sup>
+              <span>d'économie</span>
+            </div>
+          </label>
+        </div>
+
+        <div class="radio-offer">
+          <input type="radio" id="elec" name="offer" (click)="check()" required>
+          <label for="elec" class="offer offer--blue">
+            <div class="offer__title">Électricité</div>
+            <div class="offer__reduc">-10
+              <sup>%</sup>
+              <span>d'économie</span>
+            </div>
+          </label>
+        </div>
+
+      </div>
+
+      <a [routerLink]="['/souscrire']" class="button button--invert prev" id="step1">Précédent</a>
+      <a (click)="validation()" class="button button--invert next" id="step2">Suivant</a>
+    </div>
+  </div>
+
+</div>

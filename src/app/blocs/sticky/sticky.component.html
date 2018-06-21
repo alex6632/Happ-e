@@ -1,0 +1,34 @@
+<nav class="sticky">
+  <div class="sticky__inner">
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <a [routerLink]="['/']" class="main-header__logo-engie">
+      <!-- <img src="./assets/images/logo-header.png" alt="" class="main-header__logo-engie"> -->
+    </a>
+
+    <ul class="main-navigation">
+      <li class="main-navigation__item">
+        <a href="">Nos offres</a>
+      </li>
+      <li class="main-navigation__item">
+        <a href="">Faire une simulation</a>
+      </li>
+      <li class="main-navigation__item">
+        <a href="">Mon guide Happ-e</a>
+      </li>
+      <li class="main-navigation__item">
+        <a href="">FAQ</a>
+      </li>
+      <li class="main-navigation__item">
+        <a [routerLink]="['/souscrire']" routerLinkActive="active" class="mea">Souscrire</a>
+      </li>
+      <li class="main-navigation__item">
+        <a href="">Me connecter</a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -22,6 +22,10 @@ body {
 .container {
   width: 100%;
 
+  &--subscription {
+    height: calc(100vh - 75px);
+  }
+
   @include respond-to('large') {
     width: 1000px;
   }
@@ -54,4 +58,10 @@ body {
 }
 .bg-blue {
   background-color: color('primary');
+}
+
+.error {
+  color: color('secondary', 'red');
+  font-size: 14px;
+  margin-top: 10px;
 }

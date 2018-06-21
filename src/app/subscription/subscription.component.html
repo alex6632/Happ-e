@@ -1,53 +1,72 @@
-<div class="subscription">
+<div class="main-header invert alone">
+  <sticky></sticky>
+</div>
 
-  <div class="subscription__left">
-    <div class="title">C'est parti !</div>
-    <h1>Souscrivez en 6 étapes, c'est super rapide !</h1>
-    <p>
-      Pour continuer votre souscription, il vous faudra avoir sous la main :
-      <br> - Votre PDL (point de livraison)
-      <br> - Votre RIB (Relevé d’Identité Bancaire)
-    </p>
-    <p>
-      Si vous avez déjà commencé une inscription,
-      <a href="">connectez-vous.</a>
-    </p>
-    <p>
-      Vous pouvez continuer votre souscription à tout moment, vos infos seront sauvegardé
-    </p>
-    <p>
-      Et si jamais, Happ-e est toujours dans le coin pour répondre à vos questions ! ;)
-    </p>
+<div class="container container--subscription">
+
+  <div class="subscription">
+
+    <div class="subscription__left">
+      <div class="title">C'est parti !</div>
+      <h1 class="subtitle">Souscrivez en 6 étapes, c'est super rapide !</h1>
+      <p>
+        Pour continuer votre souscription, il vous faudra avoir sous la main :
+        <br> - Votre
+        <strong>PDL (point de livraison)</strong>
+        <br> - Votre
+        <strong>RIB (Relevé d’Identité Bancaire)</strong>
+      </p>
+      <p>
+        Si vous avez déjà commencé une inscription,
+        <a href="">connectez-vous.</a>
+      </p>
+      <p>
+        Vous pouvez continuer votre souscription à tout moment, vos infos seront sauvegardé
+      </p>
+      <p>
+        Et si jamais,
+        <strong>Happ-e</strong> est toujours dans le coin pour répondre à vos questions ! ;)
+      </p>
+    </div>
+
+    <div class="step">
+      <div class="step__number active">1</div>
+      <div class="step__number">2</div>
+      <div class="step__number">3</div>
+      <div class="step__number">4</div>
+      <div class="step__number">5</div>
+      <div class="step__number">6</div>
+    </div>
+
+    <div class="subscription__right">
+      <div class="subscription__right__title">Mon projet :</div>
+      <div *ngIf="errors.project !== ''" class="error">{{errors.project}}</div>
+      <div class="radio">
+        <input type="radio" name="project" id="change" (click)="check()" required>
+        <label for="change">
+          <span class="icon icon-change"></span>Je change de fournisseur</label>
+      </div>
+      <div class="radio">
+        <input type="radio" name="project" id="demenage" (click)="check()" required>
+        <label for="demenage">
+          <span class="icon icon-box"></span>Je déménage</label>
+      </div>
+
+      <div class="subscription__right__title">Je suis :</div>
+      <div *ngIf="errors.identity !== ''" class="error">{{errors.identity}}</div>
+      <div class="radio">
+        <input type="radio" name="identity" id="client" (click)="check()" required>
+        <label for="client">
+          <span class="icon icon-h-smile"></span>Client Happ-e</label>
+      </div>
+      <div class="radio">
+        <input type="radio" name="identity" id="not-yet" (click)="check()" required>
+        <label for="not-yet">
+          <span class="icon icon-h-sad"></span>Pas encore client Happ-e</label>
+      </div>
+
+      <a (click)="validation()" class="button button--invert" id="step1">Suivant</a>
+    </div>
   </div>
 
-  <div class="step">
-    <div class="step__number active">1</div>
-    <div class="step__number">2</div>
-    <div class="step__number">3</div>
-    <div class="step__number">4</div>
-    <div class="step__number">5</div>
-    <div class="step__number">6</div>
-  </div>
-
-  <div class="subscription__right">
-    <div class="subscription__right__title">Mon projet :</div>
-    <div class="radio">
-      <label for="change">Je change de fournisseur</label>
-      <input type="radio" id="change">
-    </div>
-    <div class="radio">
-      <label for="demenage">Je déménage</label>
-      <input type="radio" id="demenage">
-    </div>
-
-    <div class="subscription__right__title">Je suis :</div>
-    <div class="radio">
-      <label for="client">Client Happ-e</label>
-      <input type="radio" id="client">
-    </div>
-    <div class="radio">
-      <label for="not-yet">Pas encore client Happ-e</label>
-      <input type="radio" id="not-yet">
-    </div>
-  </div>
 </div>

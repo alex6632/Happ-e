@@ -1,0 +1,87 @@
+// _m-subscription.scss
+
+.subscription {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    color: color('primary');
+  }
+  .subtitle {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  &__left {
+    height: 85%;
+    width: 300px;
+    margin-right: 30px;
+    
+    @include respond-to('huge') {
+      width: 380px;
+      margin-right: 0;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 30px;
+      color: color('gray');
+      margin: 30px 0;
+
+      strong {
+        font-weight: 600;
+      }
+      a {
+        text-decoration: none;
+        color: color('primary');
+        font-weight: 600;
+      }
+    }
+
+  }
+
+  &__right {
+    position: relative;
+    padding-left: 30px;
+    height: 85%;
+    width: calc(100% - 430px);
+    
+    @include respond-to('huge') {
+      width: calc(100% - 530px);
+      padding-left: 50px;
+    }
+
+    &__title {
+      font-size: 36px;
+      color: color('primary');
+      font-weight: 600;
+    }
+
+    .button {
+      position: absolute;
+      bottom: 0;
+      cursor: pointer;
+      @include transition();
+
+      &.next {
+        right: 0;
+      }
+      &.prev {
+        left: 50px;
+      }
+
+      &[disabled=disabled] {
+        background-color: color('gray', 'light-more');
+        color: color('foreground', 'invert');
+        cursor: not-allowed;
+        @include transition();
+      }
+    }
+  }
+}

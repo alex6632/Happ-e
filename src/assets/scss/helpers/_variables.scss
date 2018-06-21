@@ -8,7 +8,6 @@ $grid-gutter-width: 40px; // Overwrite grid ( gutters are / 2 visually )
 
 $font-size-base: 14px; // required by rem() mixins
 $transition-duration: 500ms; // required by transition() mixins
-$icomoon-font-path: '../fonts/ao-icon-agenceo';
 
 //-------------------------------------------------------------------//
 
@@ -42,6 +41,7 @@ $colors: (
   'gray': (
     'base': #646464,
     'light': #b1b1b1,
+    'light-more': #e6e6e6,
     'super-light': #fafafa,
     'invert': #fff,
   ),
@@ -74,7 +74,6 @@ $fonts: (
   ),
   'secondary': (
     'base': ('Open Sans', sans-serif),
-    'alt': ('Roboto', sans-serif),
   ),
   'icon': (
     'base':('icon-happe')

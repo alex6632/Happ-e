@@ -7,6 +7,10 @@
     display: flex;
     justify-content: space-between;
     margin: 80px 0;
+
+    .subscription & {
+      margin: 0;
+    }
   }
 }
 
@@ -26,12 +30,21 @@
     padding: 55px;
   }
 
+  .subscription & {
+    margin: 50px 0 0 0;
+    padding: 25px 15px;
+  }
+
   &__title {
     font-size: 20px;
     font-weight: 100;
 
     @include respond-to('large') {
       font-size: 30px;
+    }
+
+    .subscription & {
+      font-size: 21px;
     }
   }
   &__reduc {
@@ -42,6 +55,11 @@
     @include respond-to('large') {
       font-size: 90px;
       margin: 45px 0 30px 0;
+    }
+
+    .subscription & {
+      font-size: 80px;
+      margin: 20px 0;
     }
 
     &::after {
@@ -56,6 +74,21 @@
         width: 180px;
         margin: 30px auto;
       }
+
+      .subscription & {
+        display: none;
+      }
+    }
+
+    .subscription & {
+      &::before {
+        display: block;
+        content: "";
+        height: 1px;
+        width: 150px;
+        margin: 25px auto;
+        @include transition();
+      }
     }
 
     sup {
@@ -66,6 +99,10 @@
       @include respond-to('large') {
         font-size: 50px;
       }
+
+      @include respond-to('large') {
+        font-size: 40px;
+      }
     }
     span {
       display: block;
@@ -75,6 +112,10 @@
 
       @include respond-to('large') {
         font-size: 22px;
+      }
+
+      .subscription & {
+        font-size: 20px;
       }
     }
   }
@@ -101,6 +142,11 @@
     .offer__reduc {
       &::after {
         background-color: color('secondary', 'red-light');
+      }
+      .subscription & {
+        &::before {
+          background-color: color('secondary', 'red-light');
+        }
       }
     }
     .offer__desc {
@@ -143,6 +189,11 @@
       &::after {
         background-color: rgba(color('background'),.5);
       }
+      .subscription & {
+        &::before {
+          background-color: color('secondary', 'green');
+        }
+      }
     }
     .offer__desc {
       color: rgba(color('background'),.5);
@@ -167,6 +218,11 @@
           &::after {
             background-color: rgba(color('background'),.5);
           }
+          .subscription & {
+            &::before {
+              background-color: rgba(color('background'),.5);
+            }
+          }
         }
 
         .offer__desc {
@@ -181,6 +237,11 @@
     .offer__reduc {
       &::after {
         background-color: rgba(color('background'),.5);
+      }
+      .subscription & {
+        &::before {
+          background-color: color('primary');
+        }
       }
     }
     .offer__desc {
@@ -205,6 +266,11 @@
         .offer__reduc {
           &::after {
             background-color: rgba(color('background'),.5);
+          }
+          .subscription & {
+            &::before {
+              background-color: rgba(color('background'),.5);
+            }
           }
         }
 

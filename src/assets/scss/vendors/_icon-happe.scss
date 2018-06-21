@@ -1,0 +1,97 @@
+// _icon-happe.scss
+
+$icomoon-font-path: "../../fonts/happe" !default;
+
+$icon-eye: "\e900";
+$icon-calendar: "\e901";
+$icon-change: "\e902";
+$icon-close: "\e903";
+$icon-download: "\e904";
+$icon-file: "\e905";
+$icon-box: "\e906";
+$icon-h-smile: "\e908";
+$icon-h-sad: "\e909";
+$icon-house: "\e90a";
+$icon-immeuble: "\e90b";
+
+@font-face {
+  font-family: 'icon-happe';
+  src:  url('#{$icomoon-font-path}/happe.eot?418hrg');
+  src:  url('#{$icomoon-font-path}/happe.eot?418hrg#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/happe.ttf?418hrg') format('truetype'),
+    url('#{$icomoon-font-path}/happe.woff?418hrg') format('woff'),
+    url('#{$icomoon-font-path}/happe.svg?418hrg#happe') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon-happe' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-eye {
+  &:before {
+    content: $icon-eye; 
+  }
+}
+.icon-calendar {
+  &:before {
+    content: $icon-calendar; 
+  }
+}
+.icon-change {
+  &:before {
+    content: $icon-change; 
+  }
+}
+.icon-close {
+  &:before {
+    content: $icon-close; 
+  }
+}
+.icon-download {
+  &:before {
+    content: $icon-download; 
+  }
+}
+.icon-file {
+  &:before {
+    content: $icon-file; 
+  }
+}
+.icon-box {
+  &:before {
+    content: $icon-box; 
+  }
+}
+.icon-h-smile {
+  &:before {
+    content: $icon-h-smile; 
+  }
+}
+.icon-h-sad {
+  &:before {
+    content: $icon-h-sad; 
+  }
+}
+.icon-house {
+  &:before {
+    content: $icon-house; 
+  }
+}
+.icon-immeuble {
+  &:before {
+    content: $icon-immeuble; 
+  }
+}
