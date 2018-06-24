@@ -1,0 +1,151 @@
+<div class="main-header invert alone">
+  <sticky></sticky>
+</div>
+
+<div class="container container--subscription">
+
+  <div class="subscription">
+
+    <div class="subscription__left">
+      <div class="title">Happ-e s’occuppe de tout ! </div>
+      <p>
+        Verifiez vos informations et retrournez votre contrat signé afin de finaliser votre souscription.
+      </p>
+      <p>
+        En cas d’erreur, pas de panique, vous pouvez retourner dans les étapes précédentes !
+      </p>
+      <p>
+        Et si jamais vous avez une question concernant votre contrat ou votre sousription,
+        <strong>Happ-e</strong> est dans le coin ;).
+      </p>
+    </div>
+
+    <div class="step">
+      <div class="step__number active">1</div>
+      <div class="step__number active">2</div>
+      <div class="step__number active">3</div>
+      <div class="step__number active">4</div>
+      <div class="step__number active">5</div>
+      <div class="step__number active">6</div>
+    </div>
+
+    <div class="subscription__right">
+      <div class="subscription__right__title">Récapitulatif :</div>
+
+      <div class="subscription__overflow">
+
+        <section>
+
+          <div class="subscription__overflow__left">
+            <div class="subscription__right__subtitle">Mon offre</div>
+            <label for="dual" class="offer offer--blue">
+              <div class="offer__title">Électricité</div>
+              <div class="offer__reduc">-10
+                <sup>%</sup>
+                <span>d'économie</span>
+              </div>
+            </label>
+          </div>
+          <div class="subscription__overflow__right">
+            <div class="subscription__right__subtitle">Mon profil</div>
+            <div class="subscription__block">
+              <div class="subscription__block__label">Nom :</div>
+              <div class="subscription__block__desc">Denevrier</div>
+            </div>
+            <div class="subscription__block">
+              <div class="subscription__block__label">Prénom :</div>
+              <div class="subscription__block__desc">Lucas</div>
+            </div>
+            <div class="subscription__block">
+              <div class="subscription__block__label">E-mail :</div>
+              <div class="subscription__block__desc">lucas.denevrier@gmail.com</div>
+            </div>
+
+            <div class="subscription__right__subtitle">Mon logement</div>
+            <div class="subscription__block">
+              <div class="subscription__block__label">Type de résidence :</div>
+              <div class="subscription__block__desc">Principale</div>
+            </div>
+            <div class="subscription__block">
+              <div class="subscription__block__label">Type de logement :</div>
+              <div class="subscription__block__desc">Appartement</div>
+            </div>
+            <div class="subscription__block">
+              <div class="subscription__block__label">Appartement :</div>
+              <div class="subscription__block__desc">22 rue Miollis, 75015 PARIS</div>
+            </div>
+          </div>
+
+        </section>
+
+        <section>
+          <div class="subscription__right__subtitle">Mon compteur</div>
+          <div class="subscription__block">
+            <div class="subscription__block__label">Point de livraison :</div>
+            <div class="subscription__block__desc">Principale</div>
+          </div>
+          <div class="subscription__block">
+            <div class="subscription__block__label">Type de compteur :</div>
+            <div class="subscription__block__desc">Appartement</div>
+          </div>
+          <div class="subscription__block">
+            <div class="subscription__block__label">Matricule compteur :</div>
+            <div class="subscription__block__desc">22 rue Miollis, 75015 PARIS</div>
+          </div>
+        </section>
+
+        <section>
+          <div class="subscription__right__subtitle">Mon contrat</div>
+          <div class="subscription__block">
+            <div class="subscription__block__label">Fournisseur actuel :</div>
+            <div class="subscription__block__desc">Direct Energie</div>
+          </div>
+          <div class="subscription__block">
+            <div class="subscription__block__label">Date de début du nouveaut contrat :</div>
+            <div class="subscription__block__desc">25/06/2018</div>
+          </div>
+        </section>
+
+        <section>
+          <div class="subscription__right__subtitle">Ma facturation</div>
+          <div class="subscription__block">
+            <div class="subscription__block__label">Adresse de facturation :</div>
+            <div class="subscription__block__desc">22 rue Miollis, 75015 PARIS</div>
+          </div>
+          <div class="subscription__block">
+            <div class="subscription__block__label">Réglement :</div>
+            <div class="subscription__block__desc">Tous les mois</div>
+          </div>
+          <div class="subscription__block">
+            <div class="subscription__block__label">RIB :</div>
+            <div class="subscription__block__desc">Denevrier-RIB.pdf
+              <span class="icon icon-file"></span>
+            </div>
+          </div>
+
+          <div class="subscription__block">
+            <div class="subscription__block__label">Code de parrainage :</div>
+            <div class="subscription__block__desc">BEHAPPY890 (Parrain : Mme Emma DENEVRIER)</div>
+          </div>
+        </section>
+
+        <div class="subscription__right__subtitle">Signature du contrat</div>
+        <p class="text-gray">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor, mauris ut dapibus laoreet, metus nulla rutrum ex,
+          ut mollis felis felis nec justo. Ut et posuere nisi. In fermentum.
+        </p>
+
+        <div class="center">
+          <a href="" class="button button--invert dwl">Télécharger mon contrat
+            <span class="icon icon-download"></span>
+          </a>
+        </div>
+
+      </div>
+
+      <a [routerLink]="['/souscrire/etape-4']" class="button button--invert button--transp-blue prev">Précédent</a>
+      <a [routerLink]="['/souscrire/bienvenue']" class="button button--invert next" id="step4">Suivant</a>
+    </div>
+  </div>
+
+</div>

@@ -2,6 +2,9 @@
 
 $icomoon-font-path: "../../fonts/happe" !default;
 
+$icon-smile: "\e90d";
+$icon-arrow-down: "\e90c";
+$icon-valid: "\e907";
 $icon-eye: "\e900";
 $icon-calendar: "\e901";
 $icon-change: "\e902";
@@ -40,6 +43,21 @@ $icon-immeuble: "\e90b";
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-smile {
+  &:before {
+    content: $icon-smile; 
+  }
+}
+.icon-arrow-down {
+  &:before {
+    content: $icon-arrow-down; 
+  }
+}
+.icon-valid {
+  &:before {
+    content: $icon-valid; 
+  }
+}
 .icon-eye {
   &:before {
     content: $icon-eye; 

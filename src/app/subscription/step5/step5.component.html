@@ -1,0 +1,75 @@
+<div class="main-header invert alone">
+    <sticky></sticky>
+  </div>
+  
+  <div class="container container--subscription">
+  
+    <div class="subscription">
+  
+      <div class="subscription__left">
+        <div class="title">Régler vos factures n’a jamais été aussi simple !</div>
+        <p>
+          Choisissez le mode de paiement que vous souhaitez.
+        </p>
+        <p>
+          Si vous avez souscrit grâce au parrainage, entrez votre code de parrainage reçu par mail. 
+        </p>
+      </div>
+  
+      <div class="step">
+        <div class="step__number active">1</div>
+        <div class="step__number active">2</div>
+        <div class="step__number active">3</div>
+        <div class="step__number active">4</div>
+        <div class="step__number active">5</div>
+        <div class="step__number">6</div>
+      </div>
+  
+      <div class="subscription__right">
+        <div class="subscription__right__title">Ma facturation :</div>
+        <div *ngIf="error !== ''" class="error">{{error}}</div>
+  
+        <div class="subscription__overflow">
+  
+          <div class="radio">
+            <input type="radio" name="residence" id="principale" (click)="check()" required>
+            <label for="principale">Utiliser mon adresse actuelle</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="residence" id="secondaire" (click)="check()" required>
+            <label for="secondaire">Utiliser une autre adresse</label>
+          </div>
+  
+          <div class="subscription__right__subtitle">Je souhaite régler ma facture</div>
+          <div class="radio">
+            <input type="radio" name="logement" id="appart" (click)="check()" required>
+            <label for="appart">Tous les mois</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="logement" id="maison" (click)="check()" required>
+            <label for="maison">Tous les 2 mois</label>
+          </div>
+  
+          <!-- RIB -->
+          <div class="subscription__right__subtitle">Importer mon RIB (Relevé d’identité bancaire)</div>
+          <div class="subscription__right__dragndrop">
+            <div class="subscription__right__dragndrop__title">Déposez vos fichiers ou <span class="subscription__right__dragndrop__link">cliquez ici</span></div>
+            <div class="subscription__right__dragndrop__subtitle">(Fichiers acceptés : pdf, png, jpg - 2 mo max)</div>
+          </div>
+          
+          <!-- Parrainage -->
+          <div class="subscription__right__subtitle">J’ai un code de parrainage</div>
+  
+          <div class="input-container input-container--w50 mg">
+            <label for="">Mon code de parrainage</label>
+            <input type="text" name="parrainage" placeholder="Ex : BEHAPPY890" id="parrainage">
+          </div>
+  
+        </div>
+  
+        <a [routerLink]="['/souscrire/etape-4']" class="button button--invert button--transp-blue prev">Précédent</a>
+        <a [routerLink]="['/souscrire/etape-6']" class="button button--invert next" id="step4">Suivant</a>
+      </div>
+    </div>
+  
+  </div>

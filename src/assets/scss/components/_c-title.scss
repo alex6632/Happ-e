@@ -16,6 +16,10 @@
   &--invert {
     color: color('foreground', 'invert');
   }
+
+  .bloc-sponsor & {
+    width: 75%;
+  }
 }
 
 .text {

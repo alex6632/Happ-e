@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { routerTransition } from '../router.animation';
 
 @Component({
-  templateUrl: './subscription.component.html'
+  templateUrl: './subscription.component.html',
+  animations: [routerTransition()],
+  host: {'[@routerTransition]': ''}
 })
 export class SubscriptionComponent {
 

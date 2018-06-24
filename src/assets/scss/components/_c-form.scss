@@ -25,6 +25,10 @@
         height: 75px;
         margin: 35px 20px;
         font-size: 18px;
+
+        .subscription__overflow & {
+          margin: -10px 20px 40px 0;
+        }
       }
 
       &:hover {
@@ -66,7 +70,11 @@
 }
 
 .radio-offer {
-  width: 30%;  
+  width: 32%;
+
+  @include respond-to('huge') {
+    width: 30%;
+  }
 
   input {
     -webkit-appearance: none;
@@ -115,4 +123,135 @@
     }
   }
 
+}
+
+.input-container {
+  position: relative;
+  display: block;
+  margin: 35px 0;
+  width: 255px;
+
+  .subscription__overflow & {
+    margin: 0 0 40px 0;
+  }
+  
+  &.mg {
+    margin-right: 20px;
+  }
+
+  &--w50 {
+    display: inline-block;
+  }
+
+  label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: color('gray');
+  }
+  input {
+    position: relative;
+    padding: 5px 0;
+    width: 100%;
+    border: none;
+    border-bottom: solid 1px rgba(color('primary'),.5);
+    font-weight: 400;
+    font-size: 18px;
+    color: color('primary');
+    outline: none;
+    @include transition();
+
+    &[name=password],
+    &[name=confirm] {
+      padding-left: 25px;
+    }
+
+    &::-webkit-input-placeholder {
+      font-style: italic;
+      color: rgba(color('primary'),.5);
+    }
+    &:-moz-placeholder {
+      font-style: italic;
+      color: rgba(color('primary'),.5);
+    }
+    &::-moz-placeholder {
+      font-style: italic;
+      color: rgba(color('primary'),.5);
+    }
+    &:-ms-input-placeholder {
+      font-style: italic;
+      color: rgba(color('primary'),.5);
+    }
+
+    &:focus {
+      border-bottom: solid 1px rgba(color('primary'),1);
+      @include transition();
+    }
+  }
+
+  .icon {
+    position: absolute;
+    color: color('primary');
+    right: 0;
+    bottom: 10px;
+    cursor: pointer;
+
+    &.icon-valid {
+      font-size: 23px;
+      right: 0px;
+      color: color('secondary', 'green');
+    }
+    &.icon-close {
+      font-size: 23px;
+      right: 0px;
+      color: color('secondary', 'red');
+    }
+    &.icon-eye {
+      right: auto;
+      left: 0;
+    }
+  }
+
+  .error {
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+}
+
+.dropdown,
+.input-date {
+  position: relative;
+  border-bottom: solid 1px rgba(color('primary'),.5);
+
+  &::after {
+    color: color('primary');
+    font-size: 15px;
+    font-family: font('icon');
+    content: $icon-arrow-down;
+    right: 10px;
+    @include center-v(absolute);
+  }
+  select {
+    padding: 5px 0;
+    width: 100%;
+    border: none;
+    font-weight: 400;
+    font-size: 18px;
+    color: color('primary');
+    background-color: transparent;
+    outline: none;
+    -webkit-appearance: none;
+    
+    option {
+  
+    }
+  }
+}
+
+.input-date {
+  &::after {
+    content: $icon-calendar;
+    font-size: 25px;
+  }
 }

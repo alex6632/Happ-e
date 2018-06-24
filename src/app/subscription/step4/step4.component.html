@@ -1,0 +1,128 @@
+<div class="main-header invert alone">
+  <sticky></sticky>
+</div>
+
+<div class="container container--subscription">
+
+  <div class="subscription">
+
+    <div class="subscription__left">
+      <div class="title">Encore un petit effort !</div>
+      <h1 class="subtitle">C’est bientôt fini ;)</h1>
+      <p>
+        Ces informations nous permettent de traiter le plus rapidement possible votre demande de contrat.
+      </p>
+      <p>
+        <span class="blue">Point de livraison (PDL)</span>
+        <br> Le Point de livraison correspond à l'identifiant de votre installation électrique. Le numéro de PDL compte 14 chiffres.
+      </p>
+      <p>
+        <span class="blue">Matricule</span>
+        <br> Il correspond à trois chiffres parmi le numéro de série du compteur.
+      </p>
+    </div>
+
+    <div class="step">
+      <div class="step__number active">1</div>
+      <div class="step__number active">2</div>
+      <div class="step__number active">3</div>
+      <div class="step__number active">4</div>
+      <div class="step__number">5</div>
+      <div class="step__number">6</div>
+    </div>
+
+    <div class="subscription__right">
+      <div class="subscription__right__title">Mon nouveau logement :</div>
+      <div *ngIf="error !== ''" class="error">{{error}}</div>
+
+      <div class="subscription__overflow">
+
+        <div class="subscription__right__subtitle">Type de résidence</div>
+        <div class="radio">
+          <input type="radio" name="residence" id="principale" (click)="check()" required>
+          <label for="principale">Pricipale</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="residence" id="secondaire" (click)="check()" required>
+          <label for="secondaire">Secondaire</label>
+        </div>
+
+        <div class="subscription__right__subtitle">Type de logement</div>
+        <div class="radio">
+          <input type="radio" name="logement" id="appart" (click)="check()" required>
+          <label for="appart">
+            <span class="icon icon-immeuble"></span>Appartement</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="logement" id="maison" (click)="check()" required>
+          <label for="maison">
+            <span class="icon icon-house"></span>Maison</label>
+        </div>
+
+        <!-- Mon adresse -->
+        <div class="subscription__right__subtitle">Mon adresse</div>
+
+        <div class="input-container input-container--w50 mg">
+          <label for="">N° et nom de rue </label>
+          <input type="text" name="adress" placeholder="13 rue des Lauriers">
+        </div>
+
+        <div class="input-container input-container--w50">
+          <label for="">Code Postal</label>
+          <input type="text" name="cp" placeholder="75019">
+        </div>
+
+        <div class="input-container">
+          <label for="">Ville</label>
+          <input type="text" name="city" placeholder="PARIS">
+        </div>
+
+        <!-- Mon compteur -->
+        <div class="subscription__right__subtitle">Mon compteur</div>
+
+        <div class="input-container input-container--w50 mg">
+          <label for="">Point de livraison (PDL)</label>
+          <input type="text" name="pdl" placeholder="ex : 23416537625 " id="pwd">
+        </div>
+
+        <div class="input-container input-container--w50">
+          <label for="">Type de compteur</label>
+          <div class="dropdown">
+            <select name="counter" id="">
+              <option value="simple">Simple</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="input-container">
+          <label for="">Matricule compteur</label>
+          <input type="text" name="counter" placeholder="ex : 456">
+        </div>
+
+        <!-- Mon contrat -->
+        <div class="subscription__right__subtitle">Mon contrat</div>
+
+        <div class="input-container">
+          <label for="">Mon fournisseur actuel</label>
+          <div class="dropdown">
+            <select name="counter" id="">
+              <option value="select">Sélectionner</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="input-container">
+          <label for="">Date de début de votre nouveau contrat </label>
+          <div class="input-date">
+              <input type="text" value="01/01/2019">
+            </div>
+        </div>
+
+      </div>
+
+      <a [routerLink]="['/souscrire/etape-3']" class="button button--invert button--transp-blue prev">Précédent</a>
+      <a [routerLink]="['/souscrire/etape-5']" class="button button--invert next" id="step4">Suivant</a>
+    </div>
+  </div>
+
+</div>

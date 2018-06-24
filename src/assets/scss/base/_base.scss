@@ -65,3 +65,48 @@ body {
   font-size: 14px;
   margin-top: 10px;
 }
+
+.happe {
+  position: absolute;
+
+  &--home {
+    top: 1000px;
+    right: -50%;
+  }
+
+  &--big {
+    width: 900px;
+    height: 900px;
+    border: solid 180px #fdfdfd;
+    border-radius: 50%;
+  }
+  &--small {
+
+  }
+  &--blue {
+
+  }
+  &--red {
+
+  }
+}
+
+.general-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.chat {
+  position: fixed;
+  bottom: 15px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: url('../../images/chat.png');
+  z-index: 99;
+}
+
+.center {
+  text-align: center;
+}

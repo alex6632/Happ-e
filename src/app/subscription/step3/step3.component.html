@@ -1,0 +1,77 @@
+<div class="main-header invert alone">
+  <sticky></sticky>
+</div>
+
+<div class="container container--subscription">
+
+  <div class="subscription">
+
+    <div class="subscription__left">
+      <div class="title">Créez votre profil</div>
+      <h1 class="subtitle">Pour un suivi toujours au top !</h1>
+      <p>
+        Créer un compte va vous permettre de suivre votre consommation d’énergie et simplifier vos échanges. Fini les papiers !
+      </p>
+    </div>
+
+    <div class="step">
+      <div class="step__number active">1</div>
+      <div class="step__number active">2</div>
+      <div class="step__number active">3</div>
+      <div class="step__number">4</div>
+      <div class="step__number">5</div>
+      <div class="step__number">6</div>
+    </div>
+
+    <div class="subscription__right">
+      <div class="subscription__right__title">Mon profil :</div>
+      <div *ngIf="error !== ''" class="error">{{error}}</div>
+
+      <div class="input-container input-container--w50 mg">
+        <label for="">Prénom</label>
+        <input type="text" name="firstName" placeholder="Buzz" [(ngModel)]="firstName" (keyup)="checkField('firstName', $event.target.value)">
+        <span *ngIf="valid.firstName === 0" class="error">{{errors.firstName}}</span>
+        <span *ngIf="valid.firstName === 0" class="icon icon-close"></span>
+        <span *ngIf="valid.firstName === 1" class="icon icon-valid"></span>
+      </div>
+
+      <div class="input-container input-container--w50">
+        <label for="">Nom</label>
+        <input type="text" name="lastName" placeholder="Léclair" [(ngModel)]="lastName" (keyup)="checkField('lastName', $event.target.value)">
+        <span *ngIf="valid.lastName === 0" class="error">{{errors.lastName}}</span>
+        <span *ngIf="valid.lastName === 0" class="icon icon-close"></span>
+        <span *ngIf="valid.lastName === 1" class="icon icon-valid"></span>
+      </div>
+
+      <div class="input-container">
+        <label for="">Email</label>
+        <input type="text" name="email" placeholder="buzzleclair@gmail.com" [(ngModel)]="email" (keyup)="checkField('email', $event.target.value)">
+        <span *ngIf="valid.email === 0" class="error">{{errors.email}}</span>
+        <span *ngIf="valid.email === 0" class="icon icon-close"></span>
+        <span *ngIf="valid.email === 1" class="icon icon-valid"></span>
+      </div>
+
+      <div class="input-container input-container--w50 mg">
+        <label for="">Mot de passe</label>
+        <input type="password" name="password" placeholder="8 caractères min." id="pwd" [(ngModel)]="password" (keyup)="checkField('password', $event.target.value)">
+        <span class="icon icon-eye"></span>
+        <span *ngIf="valid.password === 0" class="error">{{errors.password}}</span>
+        <span *ngIf="valid.password === 0" class="icon icon-close"></span>
+        <span *ngIf="valid.password === 1" class="icon icon-valid"></span>
+      </div>
+
+      <div class="input-container input-container--w50">
+        <label for="">Confirmer mon mot de passe</label>
+        <input type="password" name="confirm" placeholder="XXXXXXXX" id="confirmPwd" [(ngModel)]="confirm" (keyup)="checkField('confirm', $event.target.value)">
+        <span class="icon icon-eye"></span>
+        <span *ngIf="valid.confirm === 0" class="error">{{errors.confirm}}</span>
+        <span *ngIf="valid.confirm === 0" class="icon icon-close"></span>
+        <span *ngIf="valid.confirm === 1" class="icon icon-valid"></span>
+      </div>
+
+      <a [routerLink]="['/souscrire/etape-2']" class="button button--invert button--transp-blue prev">Précédent</a>
+      <a (click)="validation()" class="button button--invert next" id="step3">Suivant</a>
+    </div>
+  </div>
+
+</div>

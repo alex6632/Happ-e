@@ -31,6 +31,13 @@
     color: color('foreground', 'invert');
   }
 
+  &--transp-blue {
+    background: transparent;
+    border: solid 2px color('primary');
+    color: color('primary');
+    padding: 20px 38px;
+  }
+
   &--red {
     background-color: color('secondary', 'red-dark');
     color: color('foreground', 'invert');

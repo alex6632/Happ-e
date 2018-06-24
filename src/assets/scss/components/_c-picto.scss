@@ -23,4 +23,19 @@
       height: 90px;
     }
   }
+
+  &__br,
+  &__desc {
+    display: none;
+
+    @include respond-to('large') {
+      display: block;
+    }
+  }
+
+  &__desc {
+    font-size: 14px;
+    color: color('gray', 'light');
+    margin-top: 12px;
+  }
 }

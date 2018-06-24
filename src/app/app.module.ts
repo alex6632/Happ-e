@@ -20,6 +20,7 @@ import { Step3Component } from './subscription/step3/step3.component';
 import { Step4Component } from './subscription/step4/step4.component';
 import { Step5Component } from './subscription/step5/step5.component';
 import { Step6Component } from './subscription/step6/step6.component';
+import { WelcomeComponent } from './subscription/welcome/welcome.component';
 
 import * as $ from 'jquery';
 
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'souscrire/etape-4', component: Step4Component },
   { path: 'souscrire/etape-5', component: Step5Component },
   { path: 'souscrire/etape-6', component: Step6Component },
+  { path: 'souscrire/bienvenue', component: WelcomeComponent },
 ];
 
 @NgModule({
@@ -52,6 +54,7 @@ const routes: Routes = [
     Step4Component,
     Step5Component,
     Step6Component,
+    WelcomeComponent,
   ],
   imports: [
     BrowserModule,
